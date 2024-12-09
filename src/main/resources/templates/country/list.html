@@ -5,7 +5,7 @@
     <title>Tutorial of JPA</title>
 </head>
 <body>
-    <h1>Country一覧</h1>
+    <h1>Country 一覧</h1>
     <table>
         <tr>
             <th>コード</th>
@@ -16,6 +16,10 @@
             <td th:text="${data.code}"></td>
             <td th:text="${data.name}"></td>
             <td th:text="${data.population}"></td>
+            <td>
+                <a th:href="@{/country/detail/{code}/(code=${data.code})}">詳細</a>
+                <a th:href="@{/country/delete/{code}/(code=${data.code})}">削除</a>
+            </td>
         </tr>
     </table>
 </body>
